@@ -1,0 +1,9 @@
+FROM python:3-slim-buster
+
+LABEL maintainer="Mingwei Zhang <mingwei@caida.org>"
+
+RUN apt update && apt install -y curl lsb-release sudo
+
+RUN curl https://pkg.caida.org/os/debian/bootstrap.sh | bash
+
+RUN apt install -y bgpstream python3-pybgpstream
