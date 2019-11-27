@@ -1,5 +1,4 @@
 FROM debian:buster-slim
-
 LABEL maintainer="Mingwei Zhang <mingwei@caida.org>"
 
 RUN apt update 
@@ -9,5 +8,3 @@ RUN apt install -y python2.7-minimal python3.7-minimal curl lsb-release sudo
 RUN curl https://pkg.caida.org/os/debian/bootstrap.sh | bash
 
 RUN apt install -y bgpstream python3-pybgpstream
-
-ENTRYPOINT bash
