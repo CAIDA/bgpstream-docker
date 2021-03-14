@@ -55,9 +55,9 @@ For more usage examples and tutorials for `bgpreader`, please check out the tuto
 
 ## Build/test BGPStream application within Docker
 
-You can also development and test applications that uses BGPStream within the docker environment. Below is an example of using `caida/bgpstream` image as base image and run test `pybgpstream` code using the extended image.
+You can also develop and test applications that use BGPStream within the docker environment. Below is an example using the `caida/bgpstream` image as base image to test `pybgpstream` code using the extended image.
 
-First, here is an pybgpstream example code (for more examples, checkout the official [tutorial page](https://bgpstream.caida.org/docs/tutorials/pybgpstream)):
+First, here is a pybgpstream example code (for more examples, check out the official [tutorial page](https://bgpstream.caida.org/docs/tutorials/pybgpstream)):
 
     #!/usr/bin/env python
     
@@ -76,7 +76,7 @@ First, here is an pybgpstream example code (for more examples, checkout the offi
         # e.g. elem.record.time
         print(elem)
 
-To test this script, we are going to create a new docker image and copy this script into to image to run.
+To test this script, we are going to create a new docker image and copy this script into the image to run.
 
     FROM caida/bgpstream:latest
     LABEL maintainer="Mingwei Zhang <mingwei@caida.org>"
@@ -87,7 +87,7 @@ To test this script, we are going to create a new docker image and copy this scr
     ENTRYPOINT ["/usr/bin/python3"]
     CMD ["pybgpstream-print.py"]
 
-Make sure the name the python script as `pybgpstream-print.py` or any name that correspond to the first parameter of the `COPY` command in the Dockerfile. Also I name the docker image as `Dockerfile.pybgpstream` and tag the image as `pybgpstream`. Change them as you wish.
+Make sure to name the python script as `pybgpstream-print.py` or any name that corresponds to the first parameter of the `COPY` command in the Dockerfile. Also name the docker image as `Dockerfile.pybgpstream` and tag the image as `pybgpstream`. Change them as you wish.
 
 At this point, we have a docker file and a python script, we and build and run this image now.
 
