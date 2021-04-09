@@ -1,6 +1,6 @@
 # BGPStream Docker files
 
-BGPStream docker images are designed for easy development, and deployment of projects using `libbgpstream` and `pybgpstream` within a dockerized environment. Users can use this image as an base image to develop and deploy their own software based on BGPStream without worrying about the environment setup. Users can also try out useful tools bundled with BGPStream such as `bgpreader` directly using the docker image with a simple one-liner provided users have Docker environment setup.
+BGPStream docker images are designed for easy development, and deployment of projects using `libbgpstream` and `pybgpstream` within a dockerized environment. Users can use this image as an base image to develop and deploy their own software based on BGPStream without worrying about the environment setup. Users can also try out useful tools bundled with BGPStream such as `bgpreader` directly using the docker image with a simple one-liner provided users have the Docker environment set up.
 
 # Installation
 
