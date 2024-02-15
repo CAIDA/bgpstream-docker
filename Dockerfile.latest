@@ -1,8 +1,7 @@
-FROM debian:buster-slim
-LABEL maintainer="Mingwei Zhang <mingwei@caida.org>"
+FROM debian:bookworm-slim
 
 RUN apt update && \
-    apt install -y python2.7-minimal python3.7-minimal curl lsb-release sudo
+    apt install -y python3-minimal curl lsb-release sudo
 
 RUN curl https://pkg.caida.org/os/debian/bootstrap.sh | bash
 
